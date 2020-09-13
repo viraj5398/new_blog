@@ -1,0 +1,21 @@
+<h1 class="title">New Posts<h1>
+<div>
+	<%= simple_form_for @post do |f| %>
+	<div class="field">
+		<div class="control">
+			<%= f.input :title, input_html:{ class: 'input'}, wrapper: false %>
+		</div>
+	</div>
+	<div class="field">
+		<div class="control">
+	 		<%= f.input :body, input_html:{ class: 'textarea'}, wrapper: false %>
+	 	</div>
+	</div>
+	<div class="field">
+		<div class="control">
+	 		<%= f.input :user_id, input_html:{ class: 'numeric'}, wrapper: false %>
+	 	</div>
+	</div>
+	<%= f.button :submit, 'create new post', class: "button is-primary" %>
+	<% end %>
+</div>
